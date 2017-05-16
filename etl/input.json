@@ -1,0 +1,22 @@
+[
+  {
+    "format": "geotiff",
+    "name": "municipalities",
+    "cache": "NONE",
+    "noData": 0.0,
+    "backend": {
+      "type": "hadoop",
+      "path": "./tifs/municipalities.tif"
+    }
+  },
+  {
+    "format": "geotiff",
+    "name": "nl_2013",
+    "cache": "NONE",
+    "noData": 0.0,
+    "backend": {
+      "type": "hadoop",
+      "path": "./tifs/nightlight.tif"
+    }
+  }
+]
