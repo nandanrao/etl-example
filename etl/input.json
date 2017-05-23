@@ -1,14 +1,5 @@
+
 [
-  {
-    "format": "geotiff",
-    "name": "municipalities",
-    "cache": "NONE",
-    "noData": 0.0,
-    "backend": {
-      "type": "hadoop",
-      "path": "./tifs/municipalities.tif"
-    }
-  },
   {
     "format": "geotiff",
     "name": "nl_2013",
@@ -17,6 +8,16 @@
     "backend": {
       "type": "hadoop",
       "path": "./tifs/nightlight.tif"
+    }
+  },
+  {
+    "format": "geotiff",
+    "name": "pop_2015",
+    "cache": "NONE",
+    "noData": 0.0,
+    "backend": {
+      "type": "hadoop",
+      "path": "./tifs/population.tif"
     }
   }
 ]

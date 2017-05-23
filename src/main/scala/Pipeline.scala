@@ -42,13 +42,13 @@ object Pipeline {
     def writeTiff(
       rdd: RDD[(SpatialKey, Tile)] with Metadata[TileLayerMetadata[SpatialKey]],
       f: String) : Unit = {
-      GeoTiff(rdd.stitch, rdd.metadata.extent, rdd.metadata.crs).write(f)
+      GeoTiff(rdd.stitch.crop(rdd.metadata.extent), rdd.metadata.crs).write(f)
     }
 
-    val nl = makeRDD("nl_2013", tilePath, 8)
-    val munis = makeRDD("municipalities", tilePath, 9)
+    val nl = makeRDD("nl_2013", tilePath, 0)
+    val pop = makeRDD("pop_2015", tilePath, 0)
 
     writeTiff(nl, "test-etl-nl.tif")
-    writeTiff(munis, "test-etl-munis.tif")
+    writeTiff(pop, "test-etl-pop.tif")
   }
 }
